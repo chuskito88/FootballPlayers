@@ -30,7 +30,7 @@ async function fetchPlayers() {
           let a = createNode('a');    
           let button = createNode('button');  
           a.setAttribute('href', "show.html?id=" + player._id);
-          a.innerText = product._id;	               
+          a.innerText = player._id;	               
           span.innerHTML = `${player.name} ${player.surname} ${player.age} ${player.team}`;            
           append(li, span, button);
           append(li, a);
