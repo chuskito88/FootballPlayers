@@ -8,7 +8,7 @@ async function fetchNewPlayers() {
   const newPlayer = {name: nameField, age: ageField, surname: surnameField, team: teamField};
 
   const response = await fetch(
-    "https://pacific-beach-50239.herokuapp.com/players_all",
+    "https://furboh.herokuapp.com/players",
     {
       method: "POST",
       headers: {

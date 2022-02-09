@@ -7,7 +7,7 @@ async function fetchEditProduct() {
   const newPlayer = {name: nameField, age: ageField, surname: surnameField, team: teamField};
 	
     const response = await fetch(
-      "https://rest-atlas-test.herokuapp.com/products/" + id + "?_method=PUT",
+      "https://furboh.herokuapp.com/players/" + id + "?_method=PUT",
       {
         method: "POST",
         headers: {
@@ -29,7 +29,7 @@ async function fetchEditProduct() {
 
 async function fetchPlayers(id) {
   const response = await fetch(
-    "https://pacific-beach-50239.herokuapp.com/players_all/"+id,
+    "https://furboh.herokuapp.com/players/"+id,
     {
       method: "GET",
       headers: {

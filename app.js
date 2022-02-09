@@ -8,7 +8,7 @@ function append(parent, el) {
 
 async function fetchPlayers() {
   const response = await fetch(
-    "https://pacific-beach-50239.herokuapp.com/players_all",
+    "https://furboh.herokuapp.com/players",
     {
       method: "GET",
       headers: {
@@ -22,7 +22,6 @@ async function fetchPlayers() {
       //console.log(data);
       const ul = document.getElementById('players');
       let players = data;
-      //console.log(products);
       
       for(let player of players){
           let li = createNode('li');
