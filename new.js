@@ -1,7 +1,10 @@
+const btnNew = document.getElementById("btnNew");
+btnNew.addEventListener("click",fetchCreateProduct);
+
 async function fetchNewPlayers() {
   const nameField = document.getElementById("txtName").value;
-	const ageField = document.getElementById("txtAge").value;
-	const surnameField = document.getElementById("txtSurname").value;
+  const ageField = document.getElementById("txtAge").value;
+  const surnameField = document.getElementById("txtSurname").value;
   const teamField = document.getElementById("txtTeam").value;
 
   
