@@ -14,7 +14,8 @@ async function fetchEditProduct() {
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-		body: JSON.stringify(newProduct)
+	body: JSON.stringify(newPlayer),
+    	mode: "no-cors",
       }
     )
       .then((res) => res.json())
@@ -45,7 +46,7 @@ async function fetchPlayers(id) {
       
       
     try{
-      if (product != null){
+      if (players != null){
         document.getElementById("txtName").value = players.name;
         document.getElementById("txtSurname").value = players.surname;
         document.getElementById("txtAge").value = players.age;
