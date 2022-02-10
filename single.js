@@ -1,8 +1,8 @@
 const btnEdit = document.getElementById("btnEdit");
-btnEdit.addEventListener("click",fetchEditProduct);
+btnEdit.addEventListener("click",fetchEditPlayer);
 
 const btnDelete = document.getElementById("btnDelete");
-btnDelete.addEventListener("click",fetchDeleteProduct);
+btnDelete.addEventListener("click",fetchDeletePlayer);
 
 async function fetchDeletePlayer() {
 	const nameField = document.getElementById("txtName").value;
