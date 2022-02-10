@@ -1,5 +1,5 @@
 const btnNew = document.getElementById("btnNew");
-btnNew.addEventListener("click",fetchCreateProduct);
+btnNew.addEventListener("click",fetchNewPlayers);
 
 async function fetchNewPlayers() {
   const nameField = document.getElementById("txtName").value;
