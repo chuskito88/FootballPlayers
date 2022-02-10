@@ -1,4 +1,39 @@
-async function fetchEditProduct() {
+const btnEdit = document.getElementById("btnEdit");
+btnEdit.addEventListener("click",fetchEditProduct);
+
+const btnDelete = document.getElementById("btnDelete");
+btnDelete.addEventListener("click",fetchDeleteProduct);
+
+async function fetchDeletePlayer() {
+	const nameField = document.getElementById("txtName").value;
+	const ageField = document.getElementById("txtAge").value;
+	const surnameField = document.getElementById("txtSurname").value;
+  const teamField = document.getElementById("txtTeam").value;
+	
+  const newPlayer = {name: nameField, age: ageField, surname: surnameField, team: teamField};
+	
+    const response = await fetch(
+      "https://furboh.herokuapp.com/players/" + id + "?_method=DELETE",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+		body: JSON.stringify(newPlayer),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Player Edited");
+        window.location.href = "index.html";
+      })
+      .catch((error) => console.log(error));
+  }
+
+
+async function fetchEditPlayer() {
 	const nameField = document.getElementById("txtName").value;
 	const ageField = document.getElementById("txtAge").value;
 	const surnameField = document.getElementById("txtSurname").value;
@@ -14,15 +49,14 @@ async function fetchEditProduct() {
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-	body: JSON.stringify(newPlayer),
-    	mode: "no-cors",
+		body: JSON.stringify(newPlayer),
       }
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        alert("Product Edited");
-        
+        alert("Player Edited");
+        window.location.href = "index.html";
       })
       .catch((error) => console.log(error));
   }
@@ -60,7 +94,6 @@ async function fetchPlayers(id) {
     .catch((error) => console.log(error));
 }
 
-fetchPlayers();
 
 
 function getParameterByName(name, url = window.location.href) {
@@ -77,7 +110,7 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 console.log(getParameterByName('id'));
-fetchProduct(getParameterByName('id'));
+fetchPlayers(getParameterByName('id'));
 
 
 var contents2;
