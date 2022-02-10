@@ -21,8 +21,7 @@ async function fetchPlayers() {
     .then((data) => {
       //console.log(data);
       const ul = document.getElementById('players');
-      let players = data;
-      
+      let players = data.player;
       for(let player of players){
           let li = createNode('li');
           let span = createNode('span'); 
