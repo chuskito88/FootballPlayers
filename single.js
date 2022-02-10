@@ -74,8 +74,8 @@ async function fetchPlayers(id) {
     .then((res) => res.json())
     .then((data) => {
       //console.log(data);
-      let player = data.players;
-      console.log(player.name);
+      let player = data;
+      console.log(player);
       
       
     try{
