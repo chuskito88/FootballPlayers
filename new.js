@@ -23,7 +23,10 @@ async function fetchNewPlayers() {
   )
     .then((res) => res.json())
     .then((data) => {
-      
+      const span = document.getElementById('playerSpan');
+      let player = data;
+      span.innerHTML = `${player._id} ${player.name} ${player.surname} ${player.age} ${player.team}`; 
+        
     })
     .catch((error) => console.log(error));
 }
@@ -33,7 +36,7 @@ var selectTeam= document.getElementById("txtTeam");
 
 let teams = ["REAL MADRID", "FC BARCELONA", "BAYERN MUNICH", "BORUSSIA DORTMUND", "CHELSEA"];
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 4; i++) {
     contents2 += "<option>" + teams[i] + "</option>";
 }
 selectTeam.innerHTML = contents2;
