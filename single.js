@@ -4,7 +4,7 @@ btnEdit.addEventListener("click",fetchEditPlayer);
 const btnDelete = document.getElementById("btnDelete");
 btnDelete.addEventListener("click",fetchDeletePlayer);
 
-async function fetchDeletePlayer() {
+async function fetchDeletePlayer(id) {
 	const nameField = document.getElementById("txtName").value;
 	const ageField = document.getElementById("txtAge").value;
 	const surnameField = document.getElementById("txtSurname").value;
@@ -32,7 +32,7 @@ async function fetchDeletePlayer() {
   }
 
 
-async function fetchEditPlayer() {
+async function fetchEditPlayer(id) {
 	const nameField = document.getElementById("txtName").value;
 	const ageField = document.getElementById("txtAge").value;
 	const surnameField = document.getElementById("txtSurname").value;
