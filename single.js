@@ -25,7 +25,6 @@ async function fetchDeletePlayer() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         alert("Player Edited");
         window.location.href = "index.html";
       })
@@ -54,7 +53,6 @@ async function fetchEditPlayer() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         alert("Player Edited");
         window.location.href = "index.html";
       })
@@ -77,7 +75,7 @@ async function fetchPlayers(id) {
     .then((data) => {
       //console.log(data);
       let player = data.players;
-      console.log(player);
+      console.log(player.name);
       
       
     try{
@@ -123,4 +121,5 @@ for (let i = 0; i <= 5; i++) {
     contents2 += "<option>" + teams[i] + "</option>";
 }
 selectTeam.innerHTML = contents2;
+
 
