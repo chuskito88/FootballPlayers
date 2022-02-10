@@ -20,7 +20,8 @@ async function fetchDeletePlayer(id) {
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-		body: JSON.stringify(newPlayer),
+        mode: "no-cors",
+	body: JSON.stringify(newPlayer),
       }
     )
       .then((res) => res.json())
