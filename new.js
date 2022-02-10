@@ -31,12 +31,4 @@ async function fetchNewPlayers() {
     .catch((error) => console.log(error));
 }
 
-var contents2;
-var selectTeam= document.getElementById("txtTeam");
 
-let teams = ["REAL MADRID", "FC BARCELONA", "BAYERN MUNICH", "BORUSSIA DORTMUND", "CHELSEA"];
-
-for (let i = 0; i <= 4; i++) {
-    contents2 += "<option>" + teams[i] + "</option>";
-}
-selectTeam.innerHTML = contents2;
