@@ -76,15 +76,16 @@ async function fetchPlayers(id) {
     .then((res) => res.json())
     .then((data) => {
       //console.log(data);
-      let players = data.players;
+      let player = data.players;
+      console.log(player);
       
       
     try{
-      if (players != null){
-        document.getElementById("txtName").value = players.name;
-        document.getElementById("txtSurname").value = players.surname;
-        document.getElementById("txtAge").value = players.age;
-        document.getElementById("txtTeam").value = players.team;
+      if (player != null){
+        document.getElementById("txtName").value = player.name;
+        document.getElementById("txtSurname").value = player.surname;
+        document.getElementById("txtAge").value = player.age;
+        document.getElementById("txtTeam").value = player.team;
       }
     } catch(e){
       console.log(e);
