@@ -4,8 +4,6 @@ btnEdit.addEventListener("click",fetchEditPlayer);
 const btnDelete = document.getElementById("btnDelete");
 btnDelete.addEventListener("click",fetchDeletePlayer);
 
-
-consoleee();
 async function fetchDeletePlayer() {
   const idField = document.getElementById("txtId").value;
 	const nameField = document.getElementById("txtName").value;
