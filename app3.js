@@ -5,11 +5,14 @@ const btnDelete = document.getElementById("btnDelete");
 btnDelete.addEventListener("click",fetchDeletePlayer);
 
 async function fetchDeletePlayer() {
-  const idField = document.getElementById("txtId").value;
+  	const idField = document.getElementById("txtId").value;
 	const nameField = document.getElementById("txtName").value;
 	const ageField = document.getElementById("txtAge").value;
 	const surnameField = document.getElementById("txtSurname").value;
-  const teamField = document.getElementById("txtTeam").value;
+  	const teamField = document.getElementById("txtTeam").value;
+	
+	  console.log(idField + " " + nameField + " " + ageField + " " + surnameField + " " + teamField);
+
 	
   const newPlayer = {name: nameField, age: ageField, surname: surnameField, team: teamField};
 	
