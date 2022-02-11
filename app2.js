@@ -24,7 +24,7 @@ async function fetchNewPlayers() {
     .then((res) => res.json())
     .then((data) => {
       const span = document.getElementById('playerSpan');
-      let player = data;
+      let player = data.players;
       span.innerHTML = `${player._id} ${player.name} ${player.surname} ${player.age} ${player.team}`; 
         
     })
